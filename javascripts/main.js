@@ -30,11 +30,15 @@ function frenchTranslate() {
 function italianTranslate() {
 	var textArea = document.getElementById("area").value;
 	console.log("connected!");
+	var splitTextArea = textArea.split(" ");
+	console.log(splitTextArea);
 	//do something
 };
 
 function spanishTranslate() {
 	var textArea = document.getElementById("area").value;
 	console.log("connected!");
+	var splitTextArea = textArea.split(" ");
+	console.log(splitTextArea);
 	//do something
 };
