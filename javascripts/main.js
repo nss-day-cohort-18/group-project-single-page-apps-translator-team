@@ -4,38 +4,37 @@
 
 var showOutput = document.getElementById("showMe");
 
-function savedInput() {
-	var textArea = document.getElementById("area").value;
-	console.log("textArea", textArea);
-};
-
 var translateId = document.getElementById("translate");  //this is the submit button
 translateId.addEventListener("click", selectLanguage);
 
 function selectLanguage() {
-	var frenchId = document.getElementById("french");
-	var italianId = document.getElementById("italian");
-	var spanishId = document.getElementById("spanish");
-	if (frenchId.checked) {
+	var selectBox = document.getElementById("language");
+	if (selectBox.value === "french") {
 		frenchTranslate();
-	} else if (italianId.checked) {
+	} else if (selectBox.value === "italian") {
 		italianTranslate();
 	} else {
 		spanishTranslate();
 	};
 };
 
+
 function frenchTranslate() {
-	savedInput();
+	var textArea = document.getElementById("area").value;
+	console.log("connected!");
+	var splitTextArea = textArea.split(" ");
+	console.log(splitTextArea);
 	//do something
 };
 
 function italianTranslate() {
-	savedInput();
+	var textArea = document.getElementById("area").value;
+	console.log("connected!");
 	//do something
 };
 
 function spanishTranslate() {
-	savedInput();
+	var textArea = document.getElementById("area").value;
+	console.log("connected!");
 	//do something
 };
