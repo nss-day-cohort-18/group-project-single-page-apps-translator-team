@@ -25,7 +25,7 @@ function frenchTranslate(textArea) {
 	console.log("connected!");
 	var splitTextArea = textArea.split(" ");
 	console.log(splitTextArea);
-	var answer = Translator.translateFrench(splitTextArea);
+	Translator.translateFrench(splitTextArea);
 
 	//do something
 };
@@ -34,7 +34,7 @@ function italianTranslate(textArea) {
 	console.log("connected!");
 	var splitTextArea = textArea.split(" ");
 	console.log(splitTextArea);
-	var answer = Translator.translateItalian(splitTextArea);
+	Translator.translateItalian(splitTextArea);
 	//do something
 };
 
@@ -42,7 +42,7 @@ function spanishTranslate(textArea) {
 	console.log("connected!");
 	var splitTextArea = textArea.split(" ");
 	console.log(splitTextArea);
-	var answer = Translator.translateSpanish(splitTextArea);
+	Translator.translateSpanish(splitTextArea);
 
 	//do something
 };

@@ -9,16 +9,15 @@ var Translator = (function(){
 
 	return {
 		translateSpanish: function(splitTextArea) {
-			var textToTranslate = splitTextArea;
-			for (var i = 0; i < textToTranslate.length ; i++) {
-				translatedText.push(spanishWords[textToTranslate[i]]);
-				if (spanishWords[textToTranslate[i]] === undefined) {
-					translatedText.pop(spanishWords[textToTranslate[i]]);
+			console.log(splitTextArea);
+			for (var i = 0; i < splitTextArea.length; i++) {
+				translatedText.push(spanishWords[splitTextArea[i]]);
+				if (spanishWords[splitTextArea[i]] === undefined) {
+					translatedText.pop(spanishWords[splitTextArea[i]]);
 				}
 			}
 		var finished = translatedText.join(" ");
 		return finished;	
 		}
 	}
-}(Translator));
-console.log(Translator.translateSpanish());
+})();

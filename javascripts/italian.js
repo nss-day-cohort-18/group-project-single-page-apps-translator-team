@@ -16,7 +16,7 @@
 // var finished = translatedText.join(" ");
 // console.log(finished);
  ///////////////////////////////////////////////////////////////////////////////////
-var Translator = function (italianWords) {
+var Translator = (function (italianWords) {
 var italianWords = { 
         Merry: "Buon",
          Happy: "Felice",
@@ -26,18 +26,18 @@ var italianWords = {
              Thanksgiving: "Ringraziamento",
               Hanukkah: "Hanukkah"
       };
-      var textToTranslate = [ "Merry", "Happy", "Christmas", "New", "Year", "Ringraziamento", "Hanukkah"];
-
-      return {
-        getitalianWords: function () {
+  
+        italianwords.getitalianWords = function () {
                 return textToTranslate;
-        },
-        addtextToTranslate: function (textToTranslate) {
+        }
+        
+        italianwords.addtextToTranslate = function (textToTranslate) {
                 textToTranslate.push(textToTranslate);
         }
         
+        return italianwords;
       };
-}();
+})(Translator);
 console.log("Translator", Translator);
 // var finished = translatedText.join(" ");
 // console.log(finished);
