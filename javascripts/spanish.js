@@ -3,8 +3,7 @@
     
 var Translator = (function(){
 
-	// var textToTranslate = ["merry", "Christmas"];
-	var spanishWords = {merry: "feliz", Christmas: "Navidad"};
+	var spanishWords = {merry: "Feliz", christmas: "Navidad", };
 	var translatedText = [];
 
 	return {

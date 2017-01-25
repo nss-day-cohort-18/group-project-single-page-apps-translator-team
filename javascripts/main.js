@@ -22,32 +22,19 @@ function selectLanguage() {
 var answer;
 
 function frenchTranslate(textArea) {
-	console.log("connected!");
-	var splitTextArea = textArea.split(" ");
-	console.log(splitTextArea);
-	Translator.translateFrench(splitTextArea);
-
-	//do something
+	var splitTextArea = textArea.toLowerCase().split(" ");
+	showOutput.innerHTML = Translator.translateFrench(splitTextArea);
 };
 
 function italianTranslate(textArea) {
-	console.log("connected!");
-	var splitTextArea = textArea.split(" ");
-	console.log(splitTextArea);
-	Translator.translateItalian(splitTextArea);
-	//do something
+	var splitTextArea = textArea.toLowerCase().split(" ");
+	showOutput.innerHTML = Translator.translateItalian(splitTextArea);
 };
 
 function spanishTranslate(textArea) {
-	console.log("connected!");
-	var splitTextArea = textArea.split(" ");
-	console.log(splitTextArea);
-	Translator.translateSpanish(splitTextArea);
-
-	//do something
+	var splitTextArea = textArea.toLowerCase().split(" ");
+	showOutput.innerHTML = Translator.translateSpanish(splitTextArea);
 };
-
-showOutput.innerHTML = answer;
 
 
 
