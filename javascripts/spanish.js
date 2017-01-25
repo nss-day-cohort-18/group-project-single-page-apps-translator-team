@@ -1,21 +1,24 @@
+
 "use strict";
-                               
-var Translator = (function(){    
-        var source = {
-                "Feliz": "Happy",  
-                "Navidad": "Christmas" 
-        };
+    
+var Translator = (function(finished){
 
-        var target = []; 
-  
-        return {               
-                getTranslatorSource: function(sandwichname){
+	var textToTranslate = ["merry", "stinkin'", "Christmas"];
+	var spanishWords = {merry: "feliz", Christmas: "Navidad"};
+	var translatedText = [];
 
-                        return prices[sandwichname];    
-                },
-                setTranslatorTarget: function(whichone){
-                        var myArray = target.push();
-                        return something[whichone];                     
-                }
-        };
-})();
+
+	return {
+		translate: function() {
+			for (var i = 0; i < textToTranslate.length; i++) {
+				translatedText.push(spanishWords[textToTranslate[i]]);
+				if (spanishWords[textToTranslate[i]] === undefined) {
+					translatedText.pop(spanishWords[textToTranslate[i]]);
+				}
+			}
+		var finished = translatedText.join(" ");
+		return finished;	
+		}
+	}
+}(Translator));
+console.log(Translator.translate());
