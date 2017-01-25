@@ -14,7 +14,7 @@ function selectLanguage() {
 		frenchTranslate(textArea);
 	} else if (selectBox.value === "italian") {
 		italianTranslate(textArea);
-	} else {
+	} else if (selectBox.value === "spanish") {
 		spanishTranslate(textArea);
 	};
 };
