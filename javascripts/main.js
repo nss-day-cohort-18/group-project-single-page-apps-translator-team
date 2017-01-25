@@ -9,36 +9,45 @@ translateId.addEventListener("click", selectLanguage);
 
 function selectLanguage() {
 	var selectBox = document.getElementById("language");
+	var textArea = document.getElementById("area").value;
 	if (selectBox.value === "french") {
-		frenchTranslate();
+		frenchTranslate(textArea);
 	} else if (selectBox.value === "italian") {
-		italianTranslate();
+		italianTranslate(textArea);
 	} else {
-		spanishTranslate();
+		spanishTranslate(textArea);
 	};
 };
 
+var answer;
 
-function frenchTranslate() {
-	var textArea = document.getElementById("area").value;
+function frenchTranslate(textArea) {
 	console.log("connected!");
 	var splitTextArea = textArea.split(" ");
 	console.log(splitTextArea);
+	var answer = Translator.translateFrench(splitTextArea);
+
 	//do something
 };
 
-function italianTranslate() {
-	var textArea = document.getElementById("area").value;
+function italianTranslate(textArea) {
 	console.log("connected!");
 	var splitTextArea = textArea.split(" ");
 	console.log(splitTextArea);
+	var answer = Translator.translateItalian(splitTextArea);
 	//do something
 };
 
-function spanishTranslate() {
-	var textArea = document.getElementById("area").value;
+function spanishTranslate(textArea) {
 	console.log("connected!");
 	var splitTextArea = textArea.split(" ");
 	console.log(splitTextArea);
+	var answer = Translator.translateSpanish(splitTextArea);
+
 	//do something
 };
+
+showOutput.innerHTML = answer;
+
+
+
