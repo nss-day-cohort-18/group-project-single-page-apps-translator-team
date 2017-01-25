@@ -8,8 +8,7 @@ var Translator = (function(originalTranslate) {
     originalTranslate.translateFrench = function(input) {
         var newArray = [];
         for (var i = 0; i < input.length; i++) {
-            var whatever = String(input[i]);
-            newArray.push(frenchWords[whatever]);
+            newArray.push(frenchWords[input[i]]);
             newArray.push(" ");
         }
         var finished = newArray.join("");

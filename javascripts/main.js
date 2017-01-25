@@ -19,8 +19,6 @@ function selectLanguage() {
 	};
 };
 
-var answer;
-
 function frenchTranslate(textArea) {
 	var splitTextArea = textArea.toLowerCase().split(" ");
 	showOutput.innerHTML = Translator.translateFrench(splitTextArea);
